@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dodajBtn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_row="5"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".Tankowanie">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="4">
+
+        <TextView
+            android:id="@+id/textGrid2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tankowanie"
+            android:textColor="@android:color/white"
+            android:textSize="34sp" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Data"
+        android:inputType="date"
+        android:textAlignment="center"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/etLicznik"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Licznik kilometrów (km)"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/etCena"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etData" />
+
+    <RelativeLayout
+        android:id="@+id/c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etKoszt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:hint="Koszt"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/etLitry"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:hint="Litry"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <Switch
+        android:id="@+id/swDoPelna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Do pełna?"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/white"
+        android:textOff="Nie"
+        android:textOn="Tak" />
+
+    <Button
+        android:id="@+id/btnDodaj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dodaj"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="32dp" />
+
+
+</LinearLayout>
